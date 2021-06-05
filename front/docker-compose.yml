@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  frontend:
+    container_name: frontend-facturaxion
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/dist'
+    ports:
+      - '8081:5000'
